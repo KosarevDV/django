@@ -15,6 +15,7 @@ def products(request):
 
 
 def products_list(request, pk):
+    print(pk)
     context = {'links_menu': Category.objects.all()}
     return render(request, 'mainapp/products.html', context)
 
