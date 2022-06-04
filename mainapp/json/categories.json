@@ -1,6 +1,6 @@
 [
-  {"name": "дом", "description": "Описание категории дом"},
-  {"name": "Office", "description": "Description of the office category"},
-  {"name": "модерн", "description": "Описание категории модерн"},
-  {"name": "классика", "description": "Описание категории классика"}
+  {"name": "home", "description": "Description of the home category"},
+  {"name": "office", "description": "Description of the office category"},
+  {"name": "modern", "description": "Description of the modern category"},
+  {"name": "classic", "description": "Description of the classic category"}
 ]

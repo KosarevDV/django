@@ -12,9 +12,9 @@ class Command(BaseCommand):
     @staticmethod
     def _load_data_from_file(file_name):
         with open(f'{settings.BASE_DIR}/mainapp/json/{file_name}.json') as json_file:
-            # json_string = json_file.read()
-            # return json.loads(json_string)
-            return json.load(json_file)
+            json_string = json_file.read()
+            return json.loads(json_string)
+            #return json.load(json_file)
 
 
     def handle(self, *args, **options):
@@ -35,6 +35,8 @@ class Command(BaseCommand):
             Product.objects.create(**prod)
 
 
-        ShopUser.objects.create_superuser(username='django', email='django@gb.local', password='geekbrains', age=35)
+        ShopUser.objects.create_superuser(username='django2', email='django@gb.local', password='geekbrains', age=31)
+
+
 
 
