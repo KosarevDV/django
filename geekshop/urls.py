@@ -28,6 +28,10 @@ urlpatterns = [
     path('products/', include('mainapp.urls', namespace='products')),
 
     path('contact/', views.contact, name='contact'),
+
+    path('auth/', include('authapp.urls', namespace='authapp')),
+
+    path('basket/', include('basketapp.urls', namespace='basket'))
 ]
 
 if settings.DEBUG:
