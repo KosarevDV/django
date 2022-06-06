@@ -1,6 +1,6 @@
 [
   {
-    "category":"home",
+    "category":"дом",
     "name": "дом1",
     "image": "product/product-1.jpg",
     "short_desc": "Краткое описание дом1",
@@ -9,7 +9,7 @@
     "quantity": 10
   },
    {
-     "category":"home",
+     "category":"дом",
      "name": "дом2",
      "image": "product/product-2.jpg",
      "short_desc": "Краткое описание дом2",
@@ -18,7 +18,7 @@
      "quantity": 10
    },
      {
-     "category":"office",
+     "category":"офис",
      "name": "office1",
      "image": "product/product-3.jpg",
      "short_desc": "Short description for office1",
@@ -27,7 +27,7 @@
      "quantity": 10
    },
   {
-     "category":"office",
+     "category":"офис",
      "name": "офис2",
      "image": "product/product-4.jpg",
      "short_desc": "Краткое описание офис2",
@@ -36,7 +36,7 @@
      "quantity": 10
    },
   {
-     "category":"modern",
+     "category":"модерн",
      "name": "модерн1",
      "image": "product/product-11.jpg",
      "short_desc": "Краткое описание модерн1",
@@ -45,7 +45,7 @@
      "quantity": 10
    },
   {
-     "category":"modern",
+     "category":"модерн",
      "name": "модерн2",
      "image": "product/product-21.jpg",
      "short_desc": "Краткое описание модерн2",
@@ -54,7 +54,7 @@
      "quantity": 10
    },
   {
-     "category":"classic",
+     "category":"классика",
      "name": "классика1",
      "image": "product/product-31.jpg",
      "short_desc": "Краткое описание классика1",
@@ -63,7 +63,7 @@
      "quantity": 10
    },
   {
-     "category":"classic",
+     "category":"классика",
      "name": "классика2",
      "image": "product/product-41.jpg",
      "short_desc": "Краткое описание классика2",

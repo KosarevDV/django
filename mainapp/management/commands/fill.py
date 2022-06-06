@@ -1,3 +1,4 @@
+
 import json
 
 from django.core.management import BaseCommand
@@ -11,7 +12,7 @@ class Command(BaseCommand):
 
     @staticmethod
     def _load_data_from_file(file_name):
-        with open(f'{settings.BASE_DIR}/mainapp/json/{file_name}.json') as json_file:
+        with open(f'{settings.BASE_DIR}/mainapp/json/{file_name}.json', encoding="utf-8") as json_file:
             json_string = json_file.read()
             return json.loads(json_string)
             #return json.load(json_file)

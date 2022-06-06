@@ -1,6 +1,7 @@
 <ul class="links-menu">
     <li>
-        <a href="{% url 'products:product_list' 0 %}"
+        <a href="{% url 'products:product_list' 0 %}"  # адрес с именем product_list из пространства имен products, соответствующий
+категории с номером 0
            {% if request.resolver_match.kwargs.pk == 0 %} class='active' {% endif %}>
         все
         </a>
