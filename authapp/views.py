@@ -3,19 +3,25 @@ from authapp.forms import ShopUserLoginForm, ShopUserRegisterForm, ShopUserEditF
 from django.contrib import auth
 from django.urls import reverse
 
+from mainapp.models import Category
+
 
 def login(request):
     login_form = ShopUserLoginForm(data=request.POST)
+    next_url = request.GET.get('next', '')
     if request.method == 'POST' and login_form.is_valid():
         username = request.POST.get('username')
         password = request.POST. get('password')
         user = auth.authenticate(username=username, password=password)
         if user and user.is_active:
             auth.login(request, user)
+            if 'next' in request.POST.keys():
+                return HttpResponseRedirect(request.POST.get('next'))
             return HttpResponseRedirect(reverse('index'))
     context = {
         'form': login_form,
-        'title': 'Вход в ситстему'
+        'title': 'Вход в ситстему',
+        'next': next_url
     }
     return render(request, 'authapp/login.html', context)
 
@@ -42,6 +48,7 @@ def register(request):
     return render(request, 'authapp/register.html', context)
 
 def edit(request):
+    links_menu = Category.objects.all()
     if request.method == 'POST':
         edit_form = ShopUserEditForm(request.POST, request.FILES, instance=request.user)
         if edit_form.is_valid():
@@ -51,6 +58,7 @@ def edit(request):
         edit_form = ShopUserEditForm(instance=request.user)
     context = {
         'form': edit_form,
+        'links_menu': links_menu,
         'title': 'Редактирование профиля'
     }
     return render(request, 'authapp/edit.html', context)
