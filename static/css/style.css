@@ -605,8 +605,8 @@ html, body {
 
 .login div.user_avatar {
     position: fixed;
-    left: 175px;
-    top: 200px;
+    left: 105px;
+    top: 100px;
 }
 
 .user_avatar img {
@@ -1409,6 +1409,9 @@ td:first-child {
 }
 .products .block a img {
 	float: left;
+	max-height: 350px;
+	margin: 0 auto;
+
 }
 .products .block {
 	float: left;
